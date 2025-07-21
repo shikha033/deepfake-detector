@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Deepfake Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <!-- Main Content -->
+    <div class="container">
+        <h1>Understanding Deepfake Detection</h1>
+
+
+        <p>
+            Deepfakes use artificial intelligence to manipulate videos and images, making them look real.
+            This technology poses a serious threat to digital security by spreading misinformation.
+        </p>
+
+        <h2>How Our AI Detects Deepfakes</h2>
+        <ul>
+            <li>Analyzes facial inconsistencies and lighting mismatches.</li>
+            <li>Uses AI models trained on real vs. fake data.</li>
+            <li>Provides confidence scores for authenticity.</li>
+        </ul>
+
+        <!-- Back to Home button -->
+        <a href="{{ url_for('home') }}" class="back-btn">⬅ Back to Detection</a>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+
+/* Add this to your style.css file */
+.top-bar {
+    background-color:rgba(0, 0, 0, 0.6);;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Ensure it stays on top */
+}
+
+.top-bar h2 {
+    margin: 0;
+    font-size: 40px;
+}
+
+body {
+    margin-top: 60px; /* Adjust this to prevent overlap with the fixed top bar */
+}
+
+.container {
+    padding: 20px;
+}
+
+
+body {
+    background-image: url('img1.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.container {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 40px;
+    border-radius: 15px;
+    color: white;
+    width: 80%;
+    max-width: 500px;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.custom-file-upload {
+    display: inline-block;
+    padding: 12px 25px;
+    font-size: 1rem;
+    color: white;
+    background: #ff5733;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s ease-in-out;
+}
+
+.custom-file-upload:hover {
+    background: #ff2e00;
+}
+.upload-btn {
+    display: inline-block;
+    padding: 12px 25px;       /* Matches upload button padding */
+    font-size: 1rem;          /* Matches upload button font size */
+    font-weight: bold;
+    color: white;
+    background: #ff5733;      /* Matches upload button background */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+    height: 44px;             /* Adjust this if needed to match exactly */
+    vertical-align: middle;   /* Aligns nicely with upload label */
+}
+
+.upload-btn:hover {
+    background: #ff2e00;      /* Matches upload button hover */
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.learn-more-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    background: #3498db;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: 0.3s ease-in-out;
+}
+
+.learn-more-btn:hover {
+    background: #217dbb;
+}
+
+
+/* Adjust container to not hide behind navbar */
+.container {
+    margin-top: 80px;
+}
+
+/* Result card styling */
+.result-card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 15px;
+    color: white;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(12px);
+    max-width: 600px;
+    margin: auto;
+    text-align: center;
+}
+
+/* Back button */
+.back-btn {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 10px 20px;
+    background: #2ecc71;
+    color: white;
+    font-weight: bold;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.back-btn:hover {
+    background: #27ae60;
+}

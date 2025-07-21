@@ -1,0 +1,64 @@
+<!--
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deepfake Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+       <div class="top-bar">
+        <h2>DEEPDETECT</h2>
+    </div>
+
+
+    -- Main Content
+    <div class="container">
+        <h1>Deepfake Detection</h1>
+        <p>Upload an image or video to detect deepfakes using AI.</p>
+
+        <label for="file-upload" class="custom-file-upload">Upload Image/Video</label>
+        <input type="file" id="file-upload" accept="image/*, video/*">
+
+        <a href="{{ url_for('intro') }}" class="learn-more-btn">Learn More</a>
+    </div>
+
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deepfake Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="top-bar">
+        <h2>DEEPDETECT</h2>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container">
+        <h1>Deepfake Detection</h1>
+        <p>Upload an image or video to detect deepfakes using AI.</p>
+
+        <!-- ✅ This form sends the file to /predict in app.py -->
+        <form action="{{ url_for('predict') }}" method="POST" enctype="multipart/form-data">
+            <label for="file-upload" class="custom-file-upload">Upload Image/Video</label>
+            <input type="file" id="file-upload" name="file" accept="image/*, video/*" required>
+
+            <!-- ✅ Submit button -->
+            <button type="submit" class="upload-btn">Submit</button>
+        </form>
+
+        <!-- Learn More button -->
+        <a href="{{ url_for('intro') }}" class="learn-more-btn">Learn More</a>
+    </div>
+
+</body>
+</html>
+
+

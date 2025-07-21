@@ -1,0 +1,63 @@
+<!--
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Result — Deepfake Detection</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="top-bar"><h2>DEEPDETECT</h2></div>
+  <div class="container">
+    <h1>Detection Result</h1>
+    {% if filename %}
+      <video width="400" controls>
+        <source src="{{ url_for('static', filename='uploads/' ~ filename) }}">
+        Your browser does not support the video tag.
+      </video>
+      <p><strong>Prediction:</strong> {{ prediction }}</p>
+      {% if confidence %}
+        <p><strong>Confidence:</strong> {{ confidence }}%</p>
+      {% endif %}
+    {% else %}
+      <p>{{ prediction }}</p>
+    {% endif %}
+    <p><a href="{{ url_for('home') }}">Try another file</a></p>
+  </div>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Result — Deepfake Detection</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='result_style.css') }}" />
+</head>
+<body>
+
+ <div class="container">
+  <h1>Detection Result</h1>
+  <div class="result-container">
+    {% if filename %}
+      <video controls>
+        <source src="{{ url_for('static', filename='uploads/' ~ filename) }}" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <p><strong>Prediction:</strong> {{ prediction }}</p>
+      {% if confidence %}
+        <p><strong>Confidence:</strong> {{ confidence }}%</p>
+      {% endif %}
+      <p>Video path: {{ url_for('static', filename='uploads/' ~ filename) }}</p>
+    {% else %}
+      <p>{{ prediction }}</p>
+    {% endif %}
+  </div>
+  <p><a href="{{ url_for('home') }}">Try another file</a></p>
+</div>
+
+</body>
+</html>
